@@ -120,5 +120,6 @@ def update_post(request):
     if not is_empty (dict=data, key='story'):
         post.story = data['story']
         post.save ()
+    print("Hello")
     return Response ({'status': constants.API_SUCCESS, 'message': 'given id post has been updated'},
                      status=status.HTTP_200_OK)
